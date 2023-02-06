@@ -7,6 +7,7 @@
 header{
     background-color:rgb(199, 213, 225);
     padding: 10px;
+    align-items: center;
 
 }
 
@@ -15,4 +16,13 @@ header ul{
     flex-direction: row;
     justify-content: space-around;
     list-style: none;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center; background-color: rgb(231, 208, 222);
+    background-color: rgb(212, 201, 223);
+    padding: 10px;
+    
 }
