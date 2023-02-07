@@ -4,23 +4,36 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 body {
   background-image: url("./img/fundo.svg");
   background-color: #000000;
   filter: blur(80%);
+  animation: mymove 10s linear infinite alternate;
+}
+@-webkit-keyframes mymove {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% -100%;
+  }
+}
+@keyframes mymove {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% -100%;
+  }
 }
 
 main {
-  margin-top: 40px;
-  margin-left: 10%;
+  margin: 0 auto;
   color: white;
-  backdrop-filter: blur(20px) saturate(163%);
-  -webkit-backdrop-filter: blur(20px) saturate(163%);
-  background-color: rgba(70, 16, 74, 0.52);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -29,7 +42,10 @@ main {
 }
 
 header {
-  margin: 0 auto;
+  margin-top: 2px;
+  margin-left: 25%;
+  position: fixed;
+  z-index: 1000;
   color: white;
   backdrop-filter: blur(20px) saturate(163%);
   -webkit-backdrop-filter: blur(20px) saturate(163%);
@@ -38,16 +54,22 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.125);
   width: 50%;
   height: 1.5rem;
-  padding: 10px;
-  align-items: center;
+  padding: 15px;
 }
 
 header ul {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  gap: 15px;
+  justify-content: center;
+  gap: 35px;
   list-style: none;
+}
+ul li:hover {
+  cursor: pointer;
+}
+ul li:hover {
+  transform: scale(110%);
 }
 
 footer {
@@ -59,12 +81,18 @@ footer {
   padding: 10px;
 }
 
-section{
-    width: 85%;
+section {
+  backdrop-filter: blur(20px) saturate(163%);
+  -webkit-backdrop-filter: blur(20px) saturate(163%);
+  background-color: rgba(70, 16, 74, 0.52);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 50px;
+  width: 85%;
 }
 
 section:nth-child(1) {
-    margin-top: 5%;
+  margin-top: 5%;
 }
 /* Hide the default checkbox */
 .container input {
@@ -93,7 +121,6 @@ form {
 
 .container {
   display: flex;
-
 }
 
 /* Create a custom checkbox */
