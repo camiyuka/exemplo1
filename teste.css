@@ -5,6 +5,12 @@
   padding: 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  text-decoration: none;
+  text-decoration-color: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -65,11 +71,18 @@ header ul {
   gap: 35px;
   list-style: none;
 }
-ul li:hover {
+header ul li a {
+  color: white;
   cursor: pointer;
 }
-ul li:hover {
-  transform: scale(110%);
+header ul li a:hover{
+  color: rgb(219, 4, 173);
+}
+header ul li {
+  transition: 0.3s;
+}
+header ul li:hover {
+  transform: scale(125%);
 }
 
 footer {
