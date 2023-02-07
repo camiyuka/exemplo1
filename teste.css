@@ -58,6 +58,14 @@ footer {
   background-color: #200e1c;
   padding: 10px;
 }
+
+section{
+    width: 75%;
+}
+
+section:nth-child(1) {
+    margin-top: 5%;
+}
 /* Hide the default checkbox */
 .container input {
   position: absolute;
