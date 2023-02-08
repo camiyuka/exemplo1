@@ -14,6 +14,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.fundo {
+  width: 100%;
+}
+
 body {
   background-image: url("./img/fundo.svg");
   background-color: #000000;
