@@ -15,14 +15,14 @@ html {
 }
 
 .fundo {
-  width: 100%;
+  width: 100;
 }
 
 body {
   background-image: url("./img/fundo.svg");
   background-color: #000000;
   filter: blur(80%);
-  animation: mymove 10s linear infinite alternate;
+  animation: mymove 40s linear infinite alternate;
 }
 @-webkit-keyframes mymove {
   from {
@@ -232,7 +232,15 @@ section {
   content: "<";
 
 }
-
+.simbolo::after{
+  content: ">";
+}
+.simbolo::before{
+  content: "<";
+}
+.simbolo{
+  font-size: ;
+}
 
 
 
@@ -356,6 +364,8 @@ form input, textarea{
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  margin-left: 280px;
+  margin-right: 280px;
 }
 
 #btn:hover {
