@@ -10,6 +10,7 @@
 }
 
 html {
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
@@ -39,7 +40,7 @@ body {
 main {
   margin: 0 auto;
   color: white;
-
+  font-size: 1.8rem;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -48,6 +49,7 @@ main {
 }
 
 header {
+  font-size: 1.5rem;
   margin-top: 2px;
   margin-left: 25%;
   position: fixed;
@@ -104,9 +106,139 @@ section {
   width: 85%;
 }
 
-section:nth-child(1) {
+#inicio {
+  width: 50%;
+  font-size: 1.5rem;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap:12px;
+  align-items: center;
   margin-top: 8%;
+  transition: 1s;
 }
+
+#inicio::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background-image: linear-gradient(45deg, rgba(223, 5, 223, 0.457), rgba(0, 0, 255, 0.457));
+  animation: animate 3s linear infinite alternate;
+}
+
+@keyframes animate {
+  from{
+    filter: hue-rotate(0deg);
+  }
+  to{
+    filter: hue-rotate(50deg)
+  }
+}
+
+#inicio h1 {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+#inicio p{
+  text-align: center;
+}
+#inicio:hover {
+  box-shadow: 0px 0px 42px 12px #e101cb;
+}
+
+#sobre {
+  display: flex;
+  flex-direction: row;
+ 
+}
+#sobre div {
+  width: 70%;
+}
+#sobre div p{
+  margin-top: 15px;
+}
+#sobre img {
+  margin: 0 auto;;
+  width: 50%;
+}
+
+#sobre div h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.demonstrativo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.demonstrativo1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: rgba(241, 65, 230, 0.913);
+  border-radius: 15px;
+}
+.demonstrativo1::after{
+  content: ">";
+
+}
+.demonstrativo1::before{
+  content: "<";
+
+}
+
+.demonstrativo2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  background-color: rgba(209, 7, 209, 0.884);
+  border-radius: 15px;
+}
+.demonstrativo2::after{
+  content: ">";
+
+}
+.demonstrativo2::before{
+  content: "<";
+
+}
+.demonstrativo3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: rgba(134, 6, 81, 0.856);
+  border-radius: 15px;
+}
+
+.demonstrativo3::after{
+  content: ">";
+
+}
+.demonstrativo3::before{
+  content: "<";
+
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Hide the default checkbox */
 .container input {
   position: absolute;
@@ -132,17 +264,22 @@ form {
   flex-direction: column;
 }
 
-form input {
+form input, textarea{
+  color:white;
   width: 25%;
   height: 20px;
   border-radius: 15px;
-  border-style:;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000a4;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.121);
   background-color: rgba(255, 255, 255, 0);
 }
 
-.container {
+
+.containerCheckbox {
   display: flex;
+  flex-direction: row;
 }
 
 /* Create a custom checkbox */
